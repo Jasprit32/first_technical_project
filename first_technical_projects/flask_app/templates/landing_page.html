@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600;700;800&family=Oswald:wght@200;300;400;500;600;700&display=swap" 
+rel="stylesheet">
+</head>
+<body>
+
+    <!-- navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="#">
+                <span>N</span>on<span>S</span>top<span>T</span>rucking<span>I</span>nc
+            </a>
+        </div>
+        <div class="nav-list">
+            <a href="#" class="nav-link">Home</a>
+            <a href="#" class="nav-link">About</a>
+            <a href="#" class="nav-link">Blog</a>
+            <a href="#" class="nav-link">Contact</a>
+            <a href="/registration" class="nav-link">Log In</a>
+
+        </div>
+    </nav>
+    <!-- end of navbar -->
+
+    <!-- menu -->
+    <div class="menu">
+        <div class="line line-1"></div>
+        <div class="line line-2"></div>
+        <div class="line line-3"></div>
+    </div>
+    <!-- end of menu -->
+
+
+    <div class="container"></div>
+    <!-- section 1 -->
+    <div class="section-1"></div>
+    <div class="banner">
+        <h1 class="banner-heading">
+            <span class="heading-1">100+ drivers</span>
+            <span class="heading-2">200+ equipments</span>
+            <span class="heading-3">18M+ miles driven</span>
+            <span class="heading-4"></span>
+        </h1>
+        <p class="banner-paragraph">Let Us Move You With<br>Honesty and Greatness.</p>
+        <!-- <button class="banner-btn">Discover</button>     -->
+    </div>
+<!-- linking a javascript file -->
+<script type="text/javascript" src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

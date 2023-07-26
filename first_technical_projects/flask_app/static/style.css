@@ -1,0 +1,375 @@
+ /* Common styles */
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+    list-style-type: none;
+    font-family:'Baloo Da 2',cursive;
+}
+
+html{
+    font-size: 62.5%;
+}
+/* End of Common Styles */
+
+/* navbar */
+.navbar{
+    width: 100%;
+    height:6rem;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    z-index:10;
+    padding: 3rem;
+    transition: height 0.5s;
+}
+
+.navbar.change{
+    height: 100vh;
+}
+
+.logo{
+    position: absolute;
+    top: 1.5rem;
+    left: 4rem;
+}
+
+.logo a{
+    font-family:"MADE Soulmaze",san-serif ;
+    font-size: 2.5rem;
+    color: #eee;
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+}
+.logo span{
+    font-family: "MADE Soulmaze",san-serif;
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: #9e0e09;
+}
+
+.nav-list{
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.change .nav-list{
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.7s 0.5s;
+
+}
+.nav-link{
+    font-family:"MADE Soulmaze",san-serif;
+    font-size: 3rem;
+    letter-spacing: 2rem;
+    font-weight:bold;
+    color: white;
+    margin:1rem 0 ;
+    transition: color 0.4sec;
+}
+
+.nav-link:hover{
+    color: #9e0e09;
+}
+/* end of navbar */
+
+/* menu */
+.menu{
+    width: 4rem;
+    height: 4rem ;
+    position: fixed;
+    z-index: 100;
+    top: 2rem;
+    right: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    cursor: pointer;
+    
+}
+
+.line
+{
+    width: 100%;
+    height: .2rem;
+    background-color: white;
+}
+ 
+.line-1{
+    width: 50%;
+}
+.line-3{
+    width: 50%;
+    margin-left: auto;
+}
+/* end of menu */
+
+/* Section 1 */
+.section-1{
+    width: 100%;
+    height: 100vh;
+    background-image: url('truck.jpg');
+    background-size: cover;
+}
+
+.banner{
+    width: 100%;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+.banner-heading{
+    margin-bottom: 8rem;
+    height:rem ;
+    perspective:15rem;
+    
+}
+
+.banner-heading span{
+    font-family: "Owsald",sans-serif;
+    font-size: 4rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    color:white;
+    text-shadow: .3rem .3rem .6rem rgba(0,0,0,0.5);
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    transform:translateZ(8rem);
+    opacity: 0;
+    letter-spacing: 1rem;
+
+}
+.heading-1{
+    animation: animateHeading 12s 3s infinite;
+} 
+.heading-2{
+    animation: animateHeading 12s 6s infinite;
+} 
+.heading-3{
+    animation: animateHeading 12s 9s infinite;
+} 
+.heading-4{
+    animation: animateHeading 12s 12s infinite;
+} 
+@keyframes animateHeading{
+0%{
+    transform:translateZ(8rem);
+    opacity:0;
+    letter-spacing: 1.5rem;
+}
+3%{
+    transform: translateZ(0);
+    opacity: 1;
+    letter-spacing: 1.5rem;
+}
+25%{
+    transform: translateZ(0);
+    opacity: 1;
+    letter-spacing: 1.5rem;
+}
+28%{
+    transform: translateZ(8rem);
+    opacity:0;
+    letter-spacing: 3rem;
+}
+100%{
+    transform: translateZ(8rem);
+    opacity: 0;
+    letter-spacing: 3rem;
+}
+}
+.banner-paragraph{
+    font-size: 3.5rem;
+    font-weight:600;
+    font-family: "Lucida Console", monospace;
+    /* text-transform:uppercase; */
+    color:#fff;
+    /* background-color:rgba(0,0,0.6); */
+    width: 100%;
+    display: flex;
+    justify-content: end;
+
+    margin: 0 auto 6rem auto;
+    padding: 4rem 3rem; 
+    
+
+}
+
+.banner-btn{
+    width: 25rem;
+    height: 4rem;
+    background: linear-gradient(to right,#9b0e0e,#7a1010);
+    color:#fff;
+    
+    font-size: 2rem;
+    text-transform: uppercase;
+    border-radius:2rem;
+    border:0.1rem solid #800505;
+    box-shadow: 1rem 2rem 3rem rgba(0,0,0,0.5);
+    text-shadow: .6rem .3rem .2rem rgba(0,0,0,0.5);
+    cursor: pointer;
+
+
+}
+/* End of Section 1 */
+
+
+/* for login and registraion form */
+
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500);
+*:focus {
+  outline: none;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  background:white;
+  font-size: 16px;
+  color: black;
+  font-family: "Roboto",sans-serif;
+  font-weight: 300;
+}
+
+.login-box{
+  position: relative;
+  margin: 5% auto;
+  width: 100%;
+  height: 400px;
+  background: white;
+  border-radius:2px;
+  box-shadow:0 2px 4px rgba(0, 0, 0, 0.4)}
+
+.left{
+  position: absolute;
+  top:0;
+  left: 0;
+  box-sizing: border-box;
+  padding: 40px;
+  width: 50%;
+  height: 400px;
+  margin: 30px 200px;
+}
+
+h1 h2{
+  margin: 0 0 20px 0;
+  font-weight: 300;
+  font-size:28px;
+}
+
+input[type="text"],
+input[type="password"] {
+  display: block;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  padding: 4px;
+  width: 220px;
+  height: 32px;
+  border: none;
+  border-bottom: 1px solid #AAA;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  transition: 0.2s ease;
+}
+
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  border-bottom: 2px solid #16a085;
+  color: #16a085;
+  transition: 0.2s ease;
+}
+
+input[type="submit"] {
+  margin-top: 28px;
+  width: 120px;
+  height: 32px;
+  background: #16a085;
+  border: none;
+  border-radius: 2px;
+  color: #FFF;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  transition: 0.1s ease;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover,
+input[type="submit"]:focus {
+  opacity: 0.8;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  transition: 0.1s ease;
+}
+
+input[type="submit"]:active {
+  opacity: 1;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+  transition: 0.1s ease;
+}
+
+.or {
+  position: absolute;
+  top: 300px;
+  left: 570px;
+  width: 40px;
+  height: 40px;
+  background: #DDD;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  line-height: 40px;
+  text-align: center;
+}
+
+.right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  box-sizing: border-box;
+  /* padding: 40px; */
+  width: 50%;
+  height: 400px;
+  background: url('https://goo.gl/YbktSj');
+  background-size: cover;
+  background-position: center;
+  border-radius: 0 2px 2px 0;
+}
+
+
+.right .loginwith {
+  display: block;
+  margin-bottom: 40px;
+  font-size: 28px;
+  color: #FFF;
+  text-align: center;
+}
+
+
+/* for dashboard-page */
+
+
+#login-box{
+    
+    width: 100%;
+        height: 100vh;
+        background-image: url('login.jpg');
+        background-size: cover;
+    
+}
